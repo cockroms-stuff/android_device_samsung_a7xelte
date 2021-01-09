@@ -17,9 +17,9 @@
 LOCAL_PATH := device/samsung/a7xelte
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_PATH)/lineage_a7xelte.mk
+    $(LOCAL_PATH)/fluid_a7xelte.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_a7xelte-user \
-    lineage_a7xelte-userdebug \
-    lineage_a7xelte-eng
+    fluid_a7xelte-user \
+    fluid_a7xelte-userdebug \
+    fluid_a7xelte-eng
