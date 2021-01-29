@@ -43,7 +43,7 @@ TARGET_INCLUDE_GAPPS := false
 PRODUCT_PACKAGES += \
     Dialer \
     Messaging \
-    Browser2 \
+    ViaBrowser \
     Gallery2
 endif
 
