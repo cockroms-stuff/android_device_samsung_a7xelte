@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2018 The LineageOS Project
+# Copyright (C) 2021 Cockroms
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -21,7 +21,7 @@ $(call inherit-product, $(LOCAL_PATH)/device.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_l_mr1.mk)
 
-# Inherit common Lineage phone.
+# Inherit common Fluid phone.
 $(call inherit-product, vendor/fluid/config/common.mk)
 # Set those variables here to overwrite the inherited values.
 PRODUCT_NAME := fluid_a7xelte
@@ -32,6 +32,11 @@ PRODUCT_MANUFACTURER := samsung
 PRODUCT_GMS_CLIENTID_BASE := android-samsung
 DEVICE_MAINTAINER := clownless
 
+# Fluid stuff
+FLUID_BUILD_TYPE := CXCKRXMS
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.fluid.maintainer=clownless \
+    ro.fluid.cpu=Exynos7580
 
 ifeq ($(WITH_GAPPS),true)
 TARGET_INCLUDE_GAPPS := true
@@ -46,13 +51,6 @@ PRODUCT_PACKAGES += \
     ViaBrowser \
     Gallery2
 endif
-
-# FLUID STUFF
-FLUID_BUILD_TYPE := CXCKRXMS
-PRODUCT_PRODUCT_PROPERTIES += \
-    ro.fluid.maintainer=clownless \
-    ro.fluid.cpu=Exynos7580
-
 
 # APNs
 PRODUCT_COPY_FILES += \
